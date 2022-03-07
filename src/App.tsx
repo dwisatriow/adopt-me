@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import { StrictMode, useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"; // eslint-disable-line
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
