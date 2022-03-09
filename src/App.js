@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom";
-import { StrictMode, useState } from "react";
+import { StrictMode } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"; // eslint-disable-line
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; // eslint-disable-line
 import store from "./store";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
