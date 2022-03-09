@@ -1,17 +1,18 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
+// eslint-disable-next-line
+import { useSelector } from "react-redux";
 import useBreedList from "./useBreedList";
 import Results from "./Results";
-import ThemeContext from "./ThemeContext";
 
 const ANIMALS = ["bird", "cat", "dog", "rabbit", "reptile"];
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("");
-  const [animal, setAnimal] = useState("");
-  const [breed, setBreed] = useState("");
+  const location = useSelector((state) => state.location);
+  const animal = useSelector((state) => state.animal);
+  const breed = useSelector((state) => state.breed);
+  const theme = useSelector((state) => state.theme);
   const [pets, setPets] = useState([]);
   const [breeds] = useBreedList(animal);
-  const [theme, setTheme] = useContext(ThemeContext);
 
   useEffect(() => {
     requestPets();

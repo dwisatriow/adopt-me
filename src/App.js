@@ -1,15 +1,14 @@
 import ReactDOM from "react-dom";
 import { StrictMode, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"; // eslint-disable-line
+import { Provider } from "react-redux";
+import store from "./store";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
-import ThemeContext from "./ThemeContext";
 
 const App = () => {
-  const theme = useState("#ad343e");
-
   return (
-    <ThemeContext.Provider value={theme}>
+    <Provider store={store}>
       <div>
         <Router>
           <header>
@@ -27,7 +26,7 @@ const App = () => {
           </Switch>
         </Router>
       </div>
-    </ThemeContext.Provider>
+    </Provider>
   );
 };
 
